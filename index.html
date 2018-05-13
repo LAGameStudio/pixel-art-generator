@@ -566,7 +566,7 @@ function makeGrid() {
         const row = canvas.insertRow(r);
         for (let c=0; c<width.value; c++){
             var cell = row.insertCell(c);
-            cell.addEventListener("leftdown", fillSquare);
+            cell.addEventListener("mousedown", fillSquare);
 			cell.x=c;
 			cell.y=r;
 			spriteValue[c+r*spriteWidth]=0;
