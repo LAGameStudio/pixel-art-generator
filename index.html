@@ -7,7 +7,9 @@
         <script src="resize.js"></script>
         <script>
 		
-		/**
+		// DISCUSS: https://handmade.network/forums/wip/t/3139-totally_free_pixel_art_generator
+		
+/**
  * Pixel Sprite Generator v0.0.2
  *
  * This is a JavaScript version of David Bollinger's pixelrobots and
@@ -559,6 +561,8 @@ brush4.onclick = function(event) { ink =   2 ; }
 
 let genButton = document.getElementById("generate");
 genButton.onclick = function(event) { generateSprites(); };
+	  
+sizePicker.submit();
 
 function makeGrid() {
     spriteWidth = width.value;
