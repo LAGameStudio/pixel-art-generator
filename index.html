@@ -566,8 +566,9 @@ function makeGrid() {
         const row = canvas.insertRow(r);
         for (let c=0; c<width.value; c++){
             var cell = row.insertCell(c);		
-            cell.addEventListener("click", mouseClickCell);
             cell.addEventListener("mouseover", mouseOverCell);
+            cell.addEventListener("click", mouseClickCell);
+            cell.addEventListener("mousedown", mouseClickCell);
 			cell.x=c;
 			cell.y=r;
 			spriteValue[c+r*spriteWidth]=0;
@@ -594,7 +595,7 @@ let ink = -1;
 	 
 function mouseOverCell(e) {
     if(e.buttons == 1 || e.buttons == 3){
-	    
+	    console.log("Drag+Drag!");
 console.log(ink);
  var color="#000000";
  switch ( ink ) {
@@ -610,9 +611,8 @@ console.log(ink);
     }
 }
 	  
-	  function mouseClickCell(e) {
-		  
-	    
+	  function mouseClickCell(e) {  
+		  console.log("Drawing single!");
 console.log(ink);
  var color="#000000";
  switch ( ink ) {
