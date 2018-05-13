@@ -593,11 +593,7 @@ let ink = -1;
 	 
 function mouseOverCell(e) {
     if(e.buttons == 1 || e.buttons == 3){
-       fillSquare(e);
-    }
-}
-
-function fillSquare (e) {
+	    
 console.log(ink);
  var color="#000000";
  switch ( ink ) {
@@ -609,7 +605,10 @@ console.log(ink);
  console.log(this.x+","+this.y+" = "+color+" ("+ink+")");
  spriteValue[this.x+this.y*spriteWidth] = ink;
  this.setAttribute("style", `background-color: `+color);
+	    
+    }
 }
+
 
 let lastFragment = null;
 let counter = 0;
