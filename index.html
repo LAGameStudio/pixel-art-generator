@@ -562,7 +562,7 @@ brush4.onclick = function(event) { ink =   2 ; }
 let genButton = document.getElementById("generate");
 genButton.onclick = function(event) { generateSprites(); };
 	  
-setTimeout(function() { sizePicker.submit(); }, 100);
+setTimeout(function() { clearGrid(); makeGrid(); }, 100);
 
 function makeGrid() {
     spriteWidth = width.value;
