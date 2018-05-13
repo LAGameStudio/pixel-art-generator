@@ -566,7 +566,7 @@ function makeGrid() {
         const row = canvas.insertRow(r);
         for (let c=0; c<width.value; c++){
             var cell = row.insertCell(c);		
-            cell.addEventListener("click", mouseOverCell);
+            cell.addEventListener("click", mouseClickCell);
             cell.addEventListener("mouseover", mouseOverCell);
 			cell.x=c;
 			cell.y=r;
@@ -609,6 +609,22 @@ console.log(ink);
 	    
     }
 }
+	  
+	  function mouseClickCell(e) {
+		  
+	    
+console.log(ink);
+ var color="#000000";
+ switch ( ink ) {
+ case -1: color = "#000000"; break;
+ case 0: color = "#FFFFFF"; break;
+ case 1: color = "#AAAAAA"; break;
+ case 2: color = "#777777"; break;
+ }
+ console.log(this.x+","+this.y+" = "+color+" ("+ink+")");
+ spriteValue[this.x+this.y*spriteWidth] = ink;
+ this.setAttribute("style", `background-color: `+color);
+	  }
 
 
 let lastFragment = null;
