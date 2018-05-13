@@ -505,6 +505,7 @@
         <span class = "label">Columns: </span>
         <input type="number" required id="input_width" name="width" min="1" max="50" value="16">
         <input type="submit" value="Set Size &darr;">
+      </form>
 <hr>
 <p>
  <input type="checkbox" id="mirrorX"> Mirror X - <input type="checkbox" id="mirrorY"> Mirror Y - <input type="checkbox" id="colorized"> Grayscale
@@ -521,7 +522,6 @@
           <input type = "radio" name = "brush" id = "brush4" value = "2" />
           <label for = "brush4">body/border 2</label>
         </p>   		
-      </form>
 
     </div>
     <table id="pixel_canvas"></table>
@@ -562,7 +562,7 @@ brush4.onclick = function(event) { ink =   2 ; }
 let genButton = document.getElementById("generate");
 genButton.onclick = function(event) { generateSprites(); };
 	  
-sizePicker.submit();
+setTimeout(function() { sizePicker.submit(); }, 100);
 
 function makeGrid() {
     spriteWidth = width.value;
