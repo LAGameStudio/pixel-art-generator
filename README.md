@@ -14,7 +14,7 @@ A free web-based tool for generating pixel art
 
 6: RINSE AND REPEAT
 
-![alt text](https://raw.githubusercontent.com/LAGameStudio/pixel-art-generator/master/12345.png
+![alt text](https://raw.githubusercontent.com/LAGameStudio/pixel-art-generator/master/12345.png)
 
 Use it here:  http://lagamestudio.github.io/pixel-art-generator
 
